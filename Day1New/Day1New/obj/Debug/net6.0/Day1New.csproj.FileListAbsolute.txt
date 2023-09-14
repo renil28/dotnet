@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\bin\Debug\net6.0\Day1New.exe
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\bin\Debug\net6.0\Day1New.deps.json
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\bin\Debug\net6.0\Day1New.runtimeconfig.json
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\bin\Debug\net6.0\Day1New.dll
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\bin\Debug\net6.0\Day1New.pdb
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.dll
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\refint\Day1New.dll
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.pdb
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\Day1New.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\Dot Net Lab\Day1New\Day1New\obj\Debug\net6.0\ref\Day1New.dll
