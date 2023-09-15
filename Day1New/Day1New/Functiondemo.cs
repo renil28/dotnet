@@ -9,40 +9,55 @@ namespace Day1New
 {
     internal class Functiondemo
     {
+        //Demonstrating Sum
         static void Sum(int a, int b)
         {
             Console.WriteLine("Sum: " + (a + b));
         }
+        //Demonstrating Division
         static void Divide(int a, int b)
         {
             Console.WriteLine("Division: " + (a / b));
 
         }
+        //Demonstrating Subtraction
         static void Sub(int a, int b)
         {
             Console.WriteLine("Sub: " + (a - b));
 
         }
+        //Demonstrating Multiplication
         static void Mul(int a, int b)
         {
             Console.WriteLine("Multiplication: " + (a * b));
 
         }
-        //Swapping Numbers
+        //Swapping Numbers Using Ref 
         public static void Swap(ref int a, ref int b)
         {
             int c;
             c = b;
             b = a;
             a = c;
-            Console.WriteLine("a" + a + ", b =" + b);
+            Console.WriteLine("Number 1 = " + a + ", Number 2 =" + b);
         }
         
+        //Using Out
         public static void Out(out int a)
         {
             a = 20;
         }
-        static void Main(string[] args)
+
+        //Demonstrating Var vs Dynamic
+        public static void Dynamic()
+        {
+            //var i = "1
+            dynamic i = "1";
+            Console.WriteLine(i.getType());
+            i = 1; 
+            Console.WriteLine(i.getType());
+        }
+        static void Main2(string[] args)
         {
             do
             {
