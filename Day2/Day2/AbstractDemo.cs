@@ -30,16 +30,13 @@ namespace Day_2
 
         public void PrintName()
         {
-            Console.WriteLine("Name is : " + name + ", Age is :" + age);
+            Console.WriteLine("Name is : " + name + " Age is :" + age);
         }
     }
-    class Dog
-    {
-
-    }
+   
     internal class AbstractDemo
     {
-        static void Main(string[] args)
+        static void Main5(string[] args)
         {
             Mammel a = new Mammel(12, "Test");
             a.PrintName();
