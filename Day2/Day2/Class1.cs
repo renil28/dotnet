@@ -21,7 +21,7 @@ namespace Day_2
             Console.WriteLine(a + ", " + b + ", " + c);
         }
 
-        static void Main(string[] args)
+        static void Main7(string[] args)
         {
             //Parse, TryParse and Class Convert
             //TryParse raises True or False
