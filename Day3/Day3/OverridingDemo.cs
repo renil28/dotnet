@@ -27,7 +27,7 @@ namespace Day3
     }
     internal class OverridingDemo
     {
-        static void Main(string[] args) { 
+        static void Main3(string[] args) { 
         Dog dogdemo = new Dog();
         dogdemo.show();
         Console.WriteLine("----------");
