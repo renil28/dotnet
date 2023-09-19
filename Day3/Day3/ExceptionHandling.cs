@@ -9,7 +9,7 @@ namespace Day3
     //This program demonstrates exception handling
     internal class ExceptionHandling
     {
-        public static void Main()
+        public static void Main8()
         {
             try
             {
