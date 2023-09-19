@@ -22,20 +22,40 @@ Hello! My name is Carlos
 
 namespace Day3
 {
-    class Person
+    public class Person
     {
         public string Name { get; set; }
 
-        Person(string name)
+        public Person(string name)
         {
             Name = name;
         }
+
+        public override string ToString()
+        {
+            return "Hello! My name is " + Name;
+        }
         ~Person()
         {
-
+            Name = String.Empty;
         }
     }
     internal class Problem2
     {
+        public static void Main9()
+        {
+            Person[] p = new Person[3];
+            for(int i = 0; i < p.Length; i++)
+            {
+                p[i] = new Person(Console.ReadLine());
+            }
+
+            for(int i = 0;i < p.Length; i++)
+            {
+                Console.WriteLine(p[i].ToString());
+            }
+
+            
+        }
     }
 }

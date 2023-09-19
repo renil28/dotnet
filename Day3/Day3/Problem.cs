@@ -15,7 +15,7 @@ namespace Day3
 
     class Circle : Shape
     {
-        protected double radius;
+        protected internal double radius;
     }
     class Shape
     {
@@ -33,8 +33,11 @@ namespace Day3
             
             return l * b;
         }
-        public static double Area(double r)
+        public double Area(double r)
         {
+            Circle c = new Circle();
+            c.radius = r;
+            
             return r * r;
         }
 
@@ -51,11 +54,14 @@ namespace Day3
     }
     internal class Problem
     {
-        public static void Main9()
+        public static void Main()
         {
             Shape s = new Shape();
-            s.Area(2,3);
-            Console.WriteLine();
+            double x = s.Area(2,3); //Area For Rectangle
+            double y = s.Area(3); //Area for Circle
+            
+            Console.WriteLine("Rectangle Area: " + x);
+            Console.WriteLine("Circle Area: " + y);
           
             
         }
