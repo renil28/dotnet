@@ -43,7 +43,7 @@ namespace Day3
     }
     internal class StaticDemo
     {
-        public static void Main()
+        public static void Main7()
         {
             StaticDemoClass.a = 1;
             StaticDemoClass2 b = new StaticDemoClass2 ();
