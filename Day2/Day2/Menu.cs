@@ -11,9 +11,9 @@ namespace Day2
     { 
         public static void Main(string[] args)
         {
-            string[] empname= new string[5];
-            int[] salary = new int[5];
-            int[] id = new int[5];
+            string[] empname= new string[2];
+            int[] salary = new int[2];
+            int[] id = new int[2];
             void Add()
             {
                 for (int i = 0; i < id.Length; i++)
