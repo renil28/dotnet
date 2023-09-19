@@ -39,7 +39,7 @@ namespace Day3
     }
     internal class MultipleInheritence
     {
-        static void Main(string[] args)
+        static void Main4(string[] args)
         {
             //Show the print method
             C c = new C();
@@ -51,6 +51,8 @@ namespace Day3
             a.show();
             IB b = new C();
             b.show();
+
+            
         }
     }
 }
