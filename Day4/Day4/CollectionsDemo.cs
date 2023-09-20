@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Day4
 {
-    //The following program demonstrates different collections available 
+    //The following program demonstrates different generic collections available 
     //such as List, Queue, Dictionary, Stack, HashSet and LinkedList
     internal class CollectionsDemo
     {
-        public static void Main()
+        public static void Main5()
         {
             //Using Dictionary
             Console.WriteLine("Dictionary:");
