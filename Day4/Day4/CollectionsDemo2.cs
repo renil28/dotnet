@@ -10,7 +10,7 @@ namespace Day4
     // ArrayList, Queue, Stack, Hashtable
     internal class CollectionsDemo2
     {
-        public static void Main()
+        public static void Main6()
         {
             //Using ArrayList
             Console.WriteLine("ArrayList");
