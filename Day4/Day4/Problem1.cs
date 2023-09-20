@@ -55,7 +55,7 @@ namespace Day4
     }
     internal class Problem1
     {
-        static void Main(string[] args)
+        static void Main4(string[] args)
         {
             Student s = new Student();
             s.GetStudentDetails();
