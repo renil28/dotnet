@@ -11,11 +11,11 @@ namespace Day4
     //This program demonstrates Regular Expressions and Pattern Matching
     internal class RegexDemo
     {
-        public static void Main()
+        public static void Main7()
         {
-            string pattern = "^[0-9]";
+            string pattern = "^[0-9]{3}$";
             Regex rg = new Regex(pattern);
-            if(rg.IsMatch("323"))
+            if(rg.IsMatch("322"))
             {
                 Console.WriteLine("Pattern Matched");
             }
