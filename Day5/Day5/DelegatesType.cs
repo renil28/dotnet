@@ -26,7 +26,7 @@ namespace Day5
 
       
 
-        public static void Main()
+        public static void Main4()
         {
             Func<int, int, int> func = sum;
             Console.WriteLine(func(1, 2));
@@ -44,7 +44,5 @@ namespace Day5
                 Console.WriteLine("a is less than 5");
             }
         }
-
-        
     }
 }
