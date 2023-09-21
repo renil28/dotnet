@@ -9,9 +9,9 @@ namespace Day4
 {
     struct Customer
     {
-        public int Id;
-        public string Name;
-        public double Money;
+        public static int Id;
+        public static string Name;
+        public  static double Money;
 
         public void Register()
         {
