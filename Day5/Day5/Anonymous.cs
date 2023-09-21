@@ -47,7 +47,7 @@ namespace Day5
             Console.WriteLine("Multiplication: " + a * b);
         }
 
-        public static void Main()
+        public static void Main3()
         {
             
             Console.WriteLine("Calculator");
