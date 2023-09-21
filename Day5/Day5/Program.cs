@@ -4,7 +4,7 @@
     {
         //This Program Demonstrates File Handling with the use of 
         //StreamReader and StreamWriter Class
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             string FilePath = "C:\\Users\\Administrator\\Desktop\\Dot Net Lab\\Day5\\Day5\\files\\test.txt";
             StreamWriter s = new StreamWriter(FilePath);
