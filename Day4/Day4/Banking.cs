@@ -11,7 +11,7 @@ namespace Day4
     {
         public static int Id;
         public static string Name;
-        public  static double Money;
+        public static double Money;
 
         public void Register()
         {
@@ -52,7 +52,7 @@ namespace Day4
             {
                 Console.WriteLine("Banking ID: " + Id);
                 Console.WriteLine("Customer Name: " + Name);
-                Console.WriteLine("Please Enter the Money you want to Add: ");
+                Console.WriteLine("Please Enter the Money you want to Withdraw: ");
                 double SubMoney = Convert.ToDouble(Console.ReadLine());
                 if (SubMoney > Money)
                 {
