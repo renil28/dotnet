@@ -32,7 +32,7 @@ namespace Day6
     }
     internal class Class1
     {
-        public static void Main()
+        public static void Main5()
         {
             Stack<int> s = new Stack<int>(1);
             s.push(1);
