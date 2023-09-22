@@ -28,3 +28,25 @@ drop table Employee;
 select * from Employee where id in (1,2,3);
 
 select * from Employee where id not in (1);
+
+select * from Employee where EmployeeName like '%Justin%';
+
+Create table department(id int identity(1,1), DepartmentName varchar(2000));
+
+insert into department values('IT');
+insert into department values('Admin');
+insert into department values('Support');
+insert into department values('HR');
+
+select * from department;
+select * from Employee;
+
+alter table Employee add deptID int;
+update Employee set deptID = 1  where ID = 1;
+update Employee set deptID = 2  where ID = 2;
+
+--Demonstration of inner join, left join and right join
+select emp.ID, emp.EmployeeName, dep.DepartmentName from Employee emp inner join department dep on emp.deptID = dep.id;
+select emp.ID, emp.EmployeeName, dep.DepartmentName from Employee emp left join department dep on emp.deptID = dep.id;
+select emp.ID, emp.EmployeeName, dep.DepartmentName from Employee emp right join department dep on emp.deptID = dep.id;
+
