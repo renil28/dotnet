@@ -46,4 +46,33 @@ Create View GetData as
 select s.id, dbo.GetFullName(s.id) as FullName,c.ClassName, s.CreatedOn from 
 class c inner join student s on c.id = s.id;
 
+--Displaying View
 select * from GetData;
+
+--Using proc to InsertData
+ALTER proc InsertData(@FirstName varchar(200), @LastName varchar(200), @ClassName varchar(200))
+as 
+BEGIN
+
+IF((select count(*) from class where ClassName = @ClassName)>0)
+BEGIN
+insert into student(FirstName,LastName,ClassName) values(@FirstName, @LastName, (select id from class where ClassName = @ClassName));
+END
+ELSE
+
+BEGIN
+
+insert into class(ClassName) values(@ClassName);
+insert into student(FirstName,LastName,ClassName) values(@FirstName, @LastName, @@IDENTITY);
+
+END
+END;
+
+--Using InsertData
+exec InsertData 'Suresh', 'Kumar', 'X'
+
+select * from student;
+select * from class;
+
+select count(*) from class where ClassName= 'X'
+
