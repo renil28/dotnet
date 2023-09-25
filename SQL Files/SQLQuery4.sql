@@ -6,6 +6,11 @@ select * from Employee;
 create table student(id int identity(1,1), FirstName varchar(200) NOT NULL, 
 LastName varchar(200), ClassName int, CreatedOn datetime DEFAULT GETDATE(), PRIMARY KEY(id) )
 
+create table class(id int identity(1,1), ClassName varchar(200) NOT NULL);
+insert into class(ClassName) values('MCA');
+insert into class(ClassName) values('MBA');
+insert into class(ClassName) values('MSc');
+
 --Call inbuilt function GETDATE()
 select GETDATE();
 
@@ -31,3 +36,14 @@ SELECT dbo.GetFullName(id) as FullName from student;
 
 --If you want full name for specific ids such id = 1
 SELECT dbo.GetFullName(1) as FullName from student;
+
+select FirstName, LastName, c.ClassName from 
+student s inner join class c on s.id = c.id;
+
+-- Creating View
+Create View GetData as
+
+select s.id, dbo.GetFullName(s.id) as FullName,c.ClassName, s.CreatedOn from 
+class c inner join student s on c.id = s.id;
+
+select * from GetData;
