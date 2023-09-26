@@ -28,7 +28,7 @@ BEGIN
 
 IF((select count(*) from Employee where EmployeeID = @EmployeeID)>0)
 BEGIN
-insert into Employee(FirstName,LastName,EmployeeID, Salary, Gender) values(@FirstName, @LastName, @EmployeeID, @salary, @gender);
+insert into Employee(FirstName,LastName,EmployeeID, Salary, Gender) values(@FirstName, @LastName, @EmployeeID), @salary, @gender);
 update Employee set EmployeeID = dbo.GetEmployeeID();
 END
 
