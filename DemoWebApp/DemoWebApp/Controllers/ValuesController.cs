@@ -4,15 +4,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DemoWebApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         BookDbContext db = new BookDbContext();
         [HttpGet]
-        public IEnumerable<Book> Index()
+        public IEnumerable<Book> GetBooks()
         {
             return db.Books;
+        }
+        [HttpPost]
+        public IActionResult PostBooks(Book book)
+        {
+            db.Books.Add(book); 
+            db.SaveChanges();
+            return  Ok("Record is being added successfully");
+
         }
     }
 }
