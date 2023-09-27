@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DemoWebApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoWebApp.Controllers
@@ -7,9 +8,11 @@ namespace DemoWebApp.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public string Index()
+        BookDbContext db = new BookDbContext();
+        [HttpGet]
+        public IEnumerable<Book> Index()
         {
-            return "Renil";
+            return db.Books;
         }
     }
 }
