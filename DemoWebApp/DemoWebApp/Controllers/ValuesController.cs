@@ -15,7 +15,7 @@ namespace DemoWebApp.Controllers
             return db.Books;
         }
         [HttpPost]
-        public IActionResult PutBooks(Book book)
+        public IActionResult AddBooks(Book book)
         {
             db.Books.Add(book); 
             db.SaveChanges();
@@ -30,5 +30,12 @@ namespace DemoWebApp.Controllers
             db.SaveChanges();
             return Ok("Record has been deleted successfully");
         }
+        [HttpPut]
+        public IActionResult PutBook(Book book) {
+            db.Books.Update(book);
+            db.SaveChanges();
+            return Ok("Record has being updated successfully");
+        }
+
     }
 }
