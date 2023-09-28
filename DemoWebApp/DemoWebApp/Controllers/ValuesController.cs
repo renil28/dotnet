@@ -102,8 +102,8 @@ namespace DemoWebApp.Controllers
             var temp = db.Books.Skip(1).ToList();
             IQueryable query = db.Books.Skip(1);
 
-            //OrderBy Function in Linq
-            var orderbyvaluedesc =  db.Books.OrderByDescending(x => x.Id);
+            //OrderBy and ThenBy Function in Linq
+            var orderbyvaluedesc =  db.Books.OrderByDescending(x => x.Id).ThenBy(x => x.Id);
             var orderbyvalueasc = db.Books.OrderBy(x => x.Id);
 
             //Single function in Linq
@@ -125,7 +125,18 @@ namespace DemoWebApp.Controllers
 
             //Distinct funtion in Linq
             var democollection = new List<int>() { 1, 2, 3, 4, 4, 4, 6 };
+            var democollection2 = new List<int>() { 1, 2, 3, 4, 4, 4, 6 };
+
             var distinctcollection = democollection.Distinct().ToList();
+
+            //Intersect and Except function in Linq
+            var intersect  = democollection.Intersect(democollection2);
+            var except = democollection.Except(democollection2);
+
+            //GroupBy function in Linq
+            var groupbycollection = democollection.GroupBy(X => X);
+            var groupcount = db.Books.GroupBy(x => x.Bookname).Count();
+
 
             //Aggregate functions using Linq
             //Finding Sum of given collection
