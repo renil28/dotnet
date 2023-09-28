@@ -17,6 +17,12 @@ public partial class BookDbContext : DbContext
 
     public virtual DbSet<Book> Books { get; set; }
 
+    public virtual DbSet<Course> Courses { get; set; }
+
+    public virtual DbSet<CourseBookMapping> CourseBookMappings { get; set; }
+
+    public virtual DbSet<Student> Students { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=EC2AMAZ-EHR6SVV;Initial Catalog = BookDB;Integrated Security=True;TrustServerCertificate=True");
@@ -32,6 +38,41 @@ public partial class BookDbContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("bookname");
+        });
+
+        modelBuilder.Entity<Course>(entity =>
+        {
+            entity.ToTable("Course");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("ID");
+            entity.Property(e => e.CourseName)
+                .HasMaxLength(20)
+                .IsFixedLength();
+        });
+
+        modelBuilder.Entity<CourseBookMapping>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("CourseBookMapping");
+
+            entity.Property(e => e.BookId).HasColumnName("BookID");
+            entity.Property(e => e.CourseId).HasColumnName("CourseID");
+            entity.Property(e => e.Id).HasColumnName("ID");
+        });
+
+        modelBuilder.Entity<Student>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("Student");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.StudentName)
+                .HasMaxLength(2000)
+                .IsFixedLength();
         });
 
         OnModelCreatingPartial(modelBuilder);
