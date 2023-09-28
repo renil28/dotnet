@@ -111,7 +111,49 @@ namespace DemoWebApp.Controllers
             List<int> emptynumbers = new List<int>();
             var single = numbers.Single();
             var singleordefault = emptynumbers.SingleOrDefault();
+            
+            //First function in Linq
+            var first = numbers.First();
+            var firstordefault = emptynumbers.FirstOrDefault();
 
+            //Last function in Linq
+            var last = numbers.Last();
+            var lastordefault = numbers.LastOrDefault();
+
+            //Select function in Linq
+            var selecteddata = db.Books.Select(x => x.Id);
+
+            //Distinct funtion in Linq
+            var democollection = new List<int>() { 1, 2, 3, 4, 4, 4, 6 };
+            var distinctcollection = democollection.Distinct().ToList();
+
+            //Aggregate functions using Linq
+            //Finding Sum of given collection
+            var sum = democollection.Sum();
+            //Sum of even numbers
+            var sumeven = democollection.Sum(x =>
+            {
+                if (x % 2 == 0)
+                {
+                    return x;
+                }
+                else
+                {
+                    return 0;
+                }
+            });
+
+            //Finding Max
+            var max = democollection.Max();
+
+            //Finding Min
+            var min = democollection.Min();
+
+            //Finding Average
+            var avg = democollection.Average();
+
+            //Finding Count
+            var count = democollection.Count();
 
             return data;
         }
