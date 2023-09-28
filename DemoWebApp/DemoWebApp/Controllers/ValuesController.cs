@@ -95,8 +95,24 @@ namespace DemoWebApp.Controllers
         [Route("/test")]
         public IList<Book> LinqPractice()
         {
-            //var data = db.Books.Take(1).ToList();
-            var data = db.Books.Skip(1).ToList();
+            //Take function in Linq
+            var data = db.Books.Take(1).ToList();
+            
+            //Skip function in Linq
+            var temp = db.Books.Skip(1).ToList();
+            IQueryable query = db.Books.Skip(1);
+
+            //OrderBy Function in Linq
+            var orderbyvaluedesc =  db.Books.OrderByDescending(x => x.Id);
+            var orderbyvalueasc = db.Books.OrderBy(x => x.Id);
+
+            //Single function in Linq
+            List<int> numbers = new List<int> { 1 };
+            List<int> emptynumbers = new List<int>();
+            var single = numbers.Single();
+            var singleordefault = emptynumbers.SingleOrDefault();
+
+
             return data;
         }
     }
