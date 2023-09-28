@@ -97,13 +97,13 @@ namespace DemoWebApp.Controllers
         {
             //Take function in Linq
             var data = db.Books.Take(1).ToList();
-            
+
             //Skip function in Linq
             var temp = db.Books.Skip(1).ToList();
             IQueryable query = db.Books.Skip(1);
 
             //OrderBy and ThenBy Function in Linq
-            var orderbyvaluedesc =  db.Books.OrderByDescending(x => x.Id).ThenBy(x => x.Id);
+            var orderbyvaluedesc = db.Books.OrderByDescending(x => x.Id).ThenBy(x => x.Id);
             var orderbyvalueasc = db.Books.OrderBy(x => x.Id);
 
             //Single function in Linq
@@ -111,7 +111,7 @@ namespace DemoWebApp.Controllers
             List<int> emptynumbers = new List<int>();
             var single = numbers.Single();
             var singleordefault = emptynumbers.SingleOrDefault();
-            
+
             //First function in Linq
             var first = numbers.First();
             var firstordefault = emptynumbers.FirstOrDefault();
@@ -130,7 +130,7 @@ namespace DemoWebApp.Controllers
             var distinctcollection = democollection.Distinct().ToList();
 
             //Intersect and Except function in Linq
-            var intersect  = democollection.Intersect(democollection2);
+            var intersect = democollection.Intersect(democollection2);
             var except = democollection.Except(democollection2);
 
             //GroupBy function in Linq
@@ -167,6 +167,20 @@ namespace DemoWebApp.Controllers
             var count = democollection.Count();
 
             return data;
+        }
+
+        [HttpPost]
+        [Route("Validate")]
+        public IActionResult SomeApi(SampleRequest sample)
+        {
+            if(ModelState.IsValid)
+            {
+                return Ok("Please provide some value");
+            }
+            else
+            {
+                return Ok();
+            }
         }
     }
 }
