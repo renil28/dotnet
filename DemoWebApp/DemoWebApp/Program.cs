@@ -80,7 +80,8 @@ namespace DemoWebApp
             }
 
             app.UseHttpsRedirection();
-
+            //Authentication
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
