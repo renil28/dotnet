@@ -11,6 +11,12 @@ namespace DemoWebApp2.Controllers
             return View();
         }
 
+        public IActionResult Delete()
+        {
+            return View("Delete");
+        }
+
+
         public IActionResult AddBook(Books books)
         {
             using (HttpClient client = new HttpClient())
@@ -21,6 +27,14 @@ namespace DemoWebApp2.Controllers
                     ReadAsStringAsync().Result; 
             }
             return RedirectToAction("Index","Home");
+        }
+        public IActionResult RemoveBook(int id, Books books)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var data = client.DeleteAsync("https://localhost:7117/api/Values/?id=1");
+            }
+            return RedirectToAction("Index", "Home");
         }
     }
 }

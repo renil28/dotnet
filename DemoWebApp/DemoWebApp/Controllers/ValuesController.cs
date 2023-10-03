@@ -15,7 +15,7 @@ namespace DemoWebApp.Controllers
         [HttpGet]
         public IEnumerable<Book> GetBooks()
         {
-            return db.Books;
+            return db.Books.OrderByDescending(x=>x.Id);
         }
         [HttpPost]
         public IActionResult AddBooks(Book book)
