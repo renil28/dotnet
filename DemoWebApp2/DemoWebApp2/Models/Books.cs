@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Bookname { get; set; }    
-        public string BookUrl { get; set; }
+       
     }
 }
