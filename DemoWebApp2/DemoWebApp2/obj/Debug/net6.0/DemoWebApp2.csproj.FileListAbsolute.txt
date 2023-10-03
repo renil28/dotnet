@@ -26,3 +26,6 @@ C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net
 C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net6.0\DemoWebApp2.pdb
 C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net6.0\DemoWebApp2.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net6.0\ref\DemoWebApp2.dll
+C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net6.0\DemoWebApp2.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Dot Net Lab\DemoWebApp2\DemoWebApp2\obj\Debug\net6.0\DemoWebApp2.csproj.CopyComplete
