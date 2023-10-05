@@ -24,10 +24,12 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-action="Index" asp-controller="Book">Add Book</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-action="Delete" asp-controller="Book">Remove Book</a>
+                    <li class="nav-item" id="btn-login">
+                        <a class="nav-link" asp-area="" asp-action="Index" asp-controller="Login">Login</a>
                     </li>
-                  
+                    <li class="nav-item" id="btn-logout">
+                        <a class="nav-link">Logout</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -40,3 +42,27 @@
     </div>
 </body>
 </html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+<script>
+    $(document).ready(function(){
+        console.log("Hi");
+        $.ajax({
+            type:"GET",
+            url:"/Login/CheckLogin",
+            success:function(data){
+                if(data.username){
+                    $('#btn-login').hide();
+                }else{
+                  $('#btn-logout').hide();
+                }
+            },
+            error:function(data){
+                console.log(data);
+            }
+
+        });
+    });
+</script>

@@ -28,13 +28,27 @@ namespace DemoWebApp2.Controllers
             }
             return RedirectToAction("Index","Home");
         }
-        public IActionResult RemoveBook(int id, Books books)
+        public IActionResult RemoveBook(int id)
         {
             using (HttpClient client = new HttpClient())
             {
-                var data = client.DeleteAsync("https://localhost:7117/api/Values/?id=1");
+                
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("BookList", "Book");
+        }
+
+       
+
+        public IActionResult BookList()
+        {
+            IEnumerable<Books> booklist = new List<Books>();
+            using (HttpClient client = new HttpClient())
+            {
+                var data = client.GetAsync("https://localhost:7117/api/Values").Result.Content.
+                    ReadAsStringAsync().Result;
+                booklist = JsonConvert.DeserializeObject<IEnumerable<Books>>(data);
+            }
+            return View(booklist);
         }
     }
 }
